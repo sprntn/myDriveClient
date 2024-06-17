@@ -6,10 +6,10 @@ import fetchService from '../../services/fetchService';
 function RegisterPage(){
 
     const handleSubmit = (e) => {
-        console.log("submit")
+       
         e.preventDefault();
         const formData = new FormData(e.target)
-        //console.log(formData.get("userName"))
+        
 
         fetchService.register({
             email:formData.get("userEmail"),

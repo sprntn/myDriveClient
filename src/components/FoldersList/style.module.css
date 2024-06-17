@@ -1,18 +1,9 @@
 .foldersList{
-    /* width: calc(100% - var(--preview-width)); */
-    width: 100%;
-    /* flex-shrink: 3; */
-
-    /* min-height: 0;
-    overflow-y: scroll; */
-
-    height: 50%;
-    /* height: calc(100% / 3); */
-    /* border: 1px solid #000; */
+    
+    width: 100%; 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content: space-between; */
     justify-content: start;
     gap: 10px;
 
@@ -22,7 +13,6 @@
 
 .foldersList::-webkit-scrollbar{
     width: 3px;
-    /* transition: width 0.2s ease-in-out; */
 }
 
 .foldersList::-webkit-scrollbar:hover{

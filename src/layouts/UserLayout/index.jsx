@@ -5,13 +5,13 @@ import AsidePanel from '../../components/AsidePanel'
 
 function UserLayout(){
     return(
-        // <main className={styles.userPage}>
+        
             <>
                 <FolderTree/>
                 <Outlet/>
                 <AsidePanel/>
             </>
-        // </main>
+       
     )
 }
 

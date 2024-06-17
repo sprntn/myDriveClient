@@ -6,17 +6,9 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    /* background-color: #fff; */
     padding: 20px;
     background-image: url('/triangle_background.jpg');
-    /* opacity: .25; */
 }
-
-/* .addFolderForm button{
-    background-color: #ddd;
-    border-radius: 10px;
-    padding: 10px;
-} */
 
 .btns{
     width: 100%;

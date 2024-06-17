@@ -8,30 +8,21 @@ function LoginPage(){
 
     const navigate = useNavigate()
     
-    //const {setIsLogged} = useDataContext()
     const {setLoggedUser} = useDataContext()
 
     const handleSubmit = (e) => {
-        console.log("submit")
         e.preventDefault();
         const formData = new FormData(e.target)
         const formObject = Object.fromEntries(formData)
-        console.log(formObject)
-        // fetchService.login(formObject).then(res => {
-        //     console.log(res)
-        //     localStorage.setItem('token', res.token)
-        //     setIsLogged(true)
-        //     navigate("/")
-        // })
+        
         fetchService.login({
             email:formData.get("userEmail"),
             password: formData.get("userPassword")
         }).then(res => {
-            console.log(res)
             localStorage.setItem('token', res.token)
             localStorage.setItem('userRoot', formData.get("userEmail"))
-            //setIsLogged(true)
-            setLoggedUser(formData.get("userEmail"))//for now, later will be received from the server
+            
+            setLoggedUser(formData.get("userEmail"))
             navigate("/")
         })
     }

@@ -11,20 +11,12 @@ import DeleteFolder from '../DeleteItem';
 
 function AsidePanel(){
     const location = useLocation()
-    //const path = location.pathname.split("/").slice(2)[0]
     const pathArr = location.pathname.split("/")
-    //console.log(pathArr)
     const {setPopup} = useDataContext()
     const navigate = useNavigate();
     const navBack = () => {
-        //navigate(-1)
-        //const prevPath = pathArr.slice(0, -1)
-        //console.log(`/${pathArr[1]}/${pathArr[2].split("*").slice(0, -1).join('*')}`)
-        //navigate(`/${pathArr[1]}/${pathArr[2].split("*").slice(0, -1).join('*')}`)
         const path = `${pathArr[2].split("*").slice(0, -1).join('*')}`
-        //const basePath = "/folder/"
         const backPath = path != "" ? `/folder/${path}` : ""
-        console.log("back path: ",backPath);
         navigate(backPath)
     }
 

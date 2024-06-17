@@ -3,7 +3,7 @@ import styles from './style.module.css'
 
 function FoldersList({folders, endPoint}){
     
-    console.log(folders)
+    
     return(
             <div className={styles.foldersList}>
                 {folders.map((f,i) => <FolderBox key={i} endPoint={endPoint} name={f}/>)}

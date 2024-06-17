@@ -6,7 +6,7 @@ function TreeFileRow({path, name, depth}){
     const baseWidth = 140;
     const halfItemWidth = 20;
     const indents = 6;
-    console.log("file path: ", path)
+    
     return (
         <NavLink  to={"../file/" + path}>
             <div className={styles.fileRow} style={{ width: `${baseWidth - (depth % indents) * halfItemWidth}px` }}>

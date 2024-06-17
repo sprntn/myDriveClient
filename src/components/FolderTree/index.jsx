@@ -7,20 +7,15 @@ import TreeRoot from '../TreeRoot';
 import TreeFileRow from '../TreeFileRow';
 function FolderTree(){
     
-    //const {treeItems, setTreeItems} = useDataContext()
     const {treeItems} = useDataContext()
     const [closeFolderTree, setCloseFolderTree] = useState(false)
-
     const toggleFolderTree = () => {
-        console.log("toggle tree");
         setCloseFolderTree(!closeFolderTree)
     }
-    console.log("tree items:\n", treeItems)
+
     return(
         <div className={`${styles.folderTreeContainer} ${closeFolderTree ? "" : styles.closed}`}>
-            {/* <div className={styles.folderTree}> */}
             <div className={`${styles.folderTree} ${closeFolderTree ? "" : styles.closed}`}>
-                {/* test */}
                 <TreeRoot/>
                 {treeItems.map(i => {
                     if(i.isFolder){

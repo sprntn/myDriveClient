@@ -1,8 +1,4 @@
-/* .preview{
-    height: calc(100vh - 100px);
-    width: 200px;
-    background-color: blue;
-} */
+
 
 .folderTreeContainer{
     width: var(--folder-tree-width);
@@ -24,23 +20,17 @@
     gap: 2px;
     width: calc(var(--folder-tree-width) - 30px);
     height: 100%;
-    /* padding: 5px; */
+    
     transition: width 0.9s ease-in-out;
-    /* transition: width 0.9s ease-in-out; */
-    /* opacity: 1;
-    transition: opacity 0.3s ease-in-out; */
+    
     overflow-x: hidden;
 
     overflow-y: auto;
-    /* scrollbar-width: thin; */
-    /* scrollbar-width: 2px; */
-    /* scrollbar-color: red; */
     
 }
 
 .folderTree::-webkit-scrollbar{
     width: 3px;
-    /* transition: width 0.2s ease-in-out; */
 }
 
 .folderTree::-webkit-scrollbar:hover{
@@ -63,19 +53,9 @@
 
 .folderTree.closed{
     width: 0;
-    /* width: 0;
-    transition: width 0.9s ease-in-out;
-    overflow: hidden; */
-
-    /* display: none; */
-    /* opacity: 0;
-    transition: opacity 0.3s ease-in-out; */
+    
 }
 
-/* .folderTree.closed{
-    flex: 0 0 0;
-    transition: width 0.9s ease-in-out;
-} */
 
 .borderRight{
     width: 20px;

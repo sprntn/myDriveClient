@@ -11,31 +11,14 @@ function DeleteItem(){
     const navigate = useNavigate()
     const { setPopup, treeItems, setTreeItems} = useDataContext()
     const location = useLocation()
-    console.log("location",location);
     const path = location.pathname.split("/").slice(2)[0]
-    console.log(path)
-    console.log(treeItems)
-
-    //const url = "http://localhost:3000/file/delete-folder"
-
+    
     const handleOk = () => {
-        
-        
-
         fetchService.deleteItem(path).then(res => {
-            console.log(res)
-            // setFiles(res.files)
-            // setFolders(res.folders)
-            
-            //check if file or folder
-            //find the index
-            //remove from tree
-
             const itemIndex = treeItems.findIndex(i => i.path == path)
             if(itemIndex){
                 const currentDepth = treeItems[itemIndex].depth
                 if(treeItems[itemIndex].isFolder){
-                    console.log("folder")
                     let endFolderIndex = itemIndex + 1
                     while(endFolderIndex < treeItems.length && treeItems[endFolderIndex].depth > currentDepth){
                         endFolderIndex++;
@@ -44,7 +27,6 @@ function DeleteItem(){
                     setTreeItems(newTreeItems)
                 }
                 else{
-                    console.log("file")
                     const newTreeItems = treeItems.slice(0, itemIndex).concat(treeItems.slice(itemIndex + 1))
                     setTreeItems(newTreeItems)
                 }
@@ -56,7 +38,6 @@ function DeleteItem(){
     }
 
     const handleCancel = () => {
-        console.log("close");
         setPopup()
     }
 

@@ -1,14 +1,11 @@
 .folderBox{
     height: 50px;
     width: 50px;
-    /* background-color: #ddd; */
     background-color: rgba(255, 255, 255, .25);
     border-radius: 5px;
-    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
 }
 
 .folderBox svg{
@@ -32,9 +29,3 @@
     width: 50px;
     text-align: center;  
 }
-
-/* .folderName p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */

@@ -3,8 +3,6 @@ import styles from './style.module.css';
 import { FaRegFolderOpen } from "react-icons/fa";
 
 function FolderBox({endPoint, name}){
-    console.log(`${endPoint}*${name}`);
-    //const decPath = `folder/${path}/${name}`.split('/').join('#')
     return(
         <Link to={`../folder/${endPoint}*${name}`}>
             <div className={styles.folderBox}>
