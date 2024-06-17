@@ -1,0 +1,6 @@
+.recentList{
+    /* width: calc(100% - var(--preview-width)); */
+    width: 100%;
+    height: calc(100% / 3);
+    /* border: 1px solid #000; */
+}
